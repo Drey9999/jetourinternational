@@ -146,7 +146,7 @@
   transform: scale(1.08) rotate(-3deg);
 }
 
-.brand-name span {
+.brand-tagline {
   display: block;
   font-family: var(--font-body);
   font-weight: 500;
@@ -249,17 +249,18 @@
   .nav-links {
     position: fixed;
     inset: 0 0 0 auto;
-    width: min(84vw, 360px);
+    width: min(86vw, 360px);
     height: 100vh;
     background: var(--color-white);
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: flex-start;
-    gap: 4px;
-    padding: 96px 28px 32px;
+    gap: 6px;
+    padding: 100px 24px 32px;
     transform: translateX(100%);
     transition: transform var(--duration-base) var(--ease-standard);
     box-shadow: var(--shadow-raised);
+    overflow-y: auto;
   }
 
   .nav-links[data-open="true"] {
@@ -268,9 +269,20 @@
 
   .nav-links a {
     width: 100%;
-    padding: 16px 0;
-    font-size: 1.1rem;
-    border-bottom: 1px solid var(--color-border);
+    padding: 15px 14px;
+    font-size: 1.05rem;
+    border-radius: var(--radius-sm);
+    transition: background var(--duration-fast) var(--ease-standard);
+  }
+
+  .nav-links a::after {
+    display: none;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:active,
+  .nav-links a[aria-current="page"] {
+    background: var(--color-primary-tint);
   }
 
   .menu-toggle {

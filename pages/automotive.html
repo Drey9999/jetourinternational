@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Automotive | Jetour International Ltd.</title>
@@ -27,7 +28,7 @@
         <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
         <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
       </svg>
-      <span class="brand-name">JETOUR INTERNATIONAL LTD.<span>Automotive &amp; Agriculture</span></span>
+      <span class="brand-name">JETOUR<span class="brand-suffix"> INTERNATIONAL LTD.</span><span class="brand-tagline">Automotive &amp; Agriculture</span></span>
     </a>
 
     <nav aria-label="Primary">
@@ -65,44 +66,45 @@
   </section>
 
   <section class="section">
-    <div class="container grid-2" style="align-items:center;">
-      <div>
+    <div class="container grid-2" style="align-items:flex-start;">
+      <div data-reveal>
         <h2>How We Help With Vehicles</h2>
       </div>
-      <div>
+      <div data-reveal class="reveal-delay-1">
         <p class="lede">Jetour International Ltd. assists customers who need a vehicle sourced or imported. Whether you have a specific make and model in mind or just a general requirement, our team works with you to find a suitable option and manage the importation process.</p>
+        <p style="margin-top:16px;">Every request starts the same way: a conversation about what you actually need the vehicle for, what condition and budget you are working with, and how soon you need it. From there, we look at what is realistic and tell you honestly, rather than promising a timeline we cannot keep.</p>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <h2>Sourcing, Importation and Requests</h2>
       </div>
       <div class="highlight-row">
-        <div class="highlight-card">
+        <div class="highlight-card" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
           </div>
           <h3>Vehicle Sourcing</h3>
-          <p>We help you identify a suitable vehicle based on your requirements, budget and preferences.</p>
+          <p>We help you identify a suitable vehicle based on your requirements, budget and preferences. This means asking questions upfront rather than guessing at what you want, and narrowing options down to a shortlist worth your time.</p>
           <a href="contact.html?type=vehicle" class="btn btn-outline">Request a Vehicle</a>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-1" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/><path d="M3 8.5V16l9 4.5 9-4.5V8.5"/><path d="M12 13v7.5"/></svg>
           </div>
           <h3>Vehicle Importation</h3>
-          <p>Once a vehicle is identified, we manage the importation process and keep you updated along the way.</p>
+          <p>Once a vehicle is identified, we manage the importation process and keep you updated along the way. You should never have to chase us for a status update. If something changes, we tell you before you have to ask.</p>
           <a href="contact.html?type=vehicle" class="btn btn-outline">Ask About Importation</a>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-2" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V3Z"/><path d="M8 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"/><path d="M9 13h6M9 17h6"/></svg>
           </div>
           <h3>Vehicle Requests</h3>
-          <p>Have a specific vehicle in mind? Submit a request with your preferred details and we will follow up.</p>
+          <p>Have a specific vehicle in mind? Submit a request with your preferred details and we will follow up to confirm whether it is something we can realistically source.</p>
           <a href="contact.html?type=vehicle" class="btn btn-outline">Start Your Vehicle Request</a>
         </div>
       </div>
@@ -111,60 +113,62 @@
 
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <h2>What We Can Help Source</h2>
+      <div class="section-head" data-reveal>
+        <h2>Vehicle Categories</h2>
+        <p style="margin-top:16px;">A general sense of what we can help with. If your need does not fit neatly into one of these, reach out and ask anyway.</p>
       </div>
       <div class="grid-4">
-        <div class="highlight-card">
+        <div class="highlight-card" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16.5V12l1.6-4.2A2 2 0 0 1 7.5 6.5h9a2 2 0 0 1 1.9 1.3L20 12v4.5"/><path d="M4 16.5h16"/><circle cx="7.5" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/></svg>
           </div>
           <h3>Cars</h3>
-          <p>Saloon and everyday vehicles suited to personal use.</p>
+          <p>Saloon and everyday vehicles suited to personal use, commuting and general reliability.</p>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-1" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16.5V11l2-3.5h8l3 3.5h3v5"/><path d="M4 16.5h16"/><circle cx="7.5" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/></svg>
           </div>
           <h3>SUVs</h3>
-          <p>Larger vehicles for families and everyday flexibility.</p>
+          <p>Larger vehicles for families and everyday flexibility, especially where road conditions vary.</p>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-2" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16.5V11h7v5.5"/><path d="M9 11h5l3 3.5h2v2"/><path d="M2 16.5h19"/><circle cx="6" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/></svg>
           </div>
           <h3>Pickup Trucks</h3>
-          <p>Suited to work sites and heavier duty requirements.</p>
+          <p>Suited to work sites and heavier duty requirements where load capacity matters.</p>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-3" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="14" height="7.5" rx="1"/><path d="M16 12h3l3 2v2.5h-6"/><circle cx="6" cy="17" r="1.6"/><circle cx="17.5" cy="17" r="1.6"/></svg>
           </div>
           <h3>Commercial Vehicles</h3>
-          <p>Vehicles suited to business and logistics use.</p>
+          <p>Vehicles suited to business and logistics use, sourced with your operational needs in mind.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
-    <div class="container grid-2" style="align-items:center;">
-      <div>
-        <h2>Making a Vehicle Enquiry Is Simple</h2>
-        <p class="lede" style="margin-top:14px;">Send us your requirements through the contact form or WhatsApp, and our team will follow up to discuss suitable options and next steps.</p>
+    <div class="container grid-2" style="align-items:flex-start;">
+      <div data-reveal>
+        <h2>How to Enquire</h2>
+        <p style="margin-top:14px;">Send us your requirements through the contact form or WhatsApp, and our team will follow up to discuss suitable options and next steps.</p>
+        <p style="margin-top:14px;">A quick note on what helps: the more specific you can be up front about vehicle type, budget range and timeline, the faster we can give you a useful answer instead of a round of clarifying questions.</p>
       </div>
-      <div class="principles-list" style="border-top:none;">
+      <div class="principles-list reveal-delay-1" data-reveal style="border-top:none;">
         <div class="principle-row" style="border-top:1px solid var(--color-border);">
           <span class="principle-index">01</span>
-          <div><h3>Share Your Requirements</h3><p>Tell us the vehicle type, and any preferences you have.</p></div>
+          <div><h3>Share Your Requirements</h3><p>Tell us the vehicle type, budget range and any preferences you have. The more detail, the better.</p></div>
         </div>
         <div class="principle-row">
           <span class="principle-index">02</span>
-          <div><h3>We Follow Up</h3><p>Our team reviews your request and reaches out to discuss options.</p></div>
+          <div><h3>We Follow Up</h3><p>Our team reviews your request and reaches out to discuss options and confirm what is realistic.</p></div>
         </div>
         <div class="principle-row">
           <span class="principle-index">03</span>
-          <div><h3>We Manage the Process</h3><p>Once agreed, we handle sourcing and importation on your behalf.</p></div>
+          <div><h3>We Manage the Process</h3><p>Once agreed, we handle sourcing and importation on your behalf and keep you posted on progress.</p></div>
         </div>
       </div>
     </div>
@@ -172,10 +176,10 @@
 
   <section class="section--tight">
     <div class="container">
-      <div class="cta-band">
+      <div class="cta-band" data-reveal>
         <div>
           <h2>Looking for a Vehicle?</h2>
-          <p>Send us your requirements and our team will get back to you.</p>
+          <p>Send us your requirements and our team will get back to you. No pressure, no obligation, just a straight answer.</p>
         </div>
         <div class="cta-row">
           <a href="contact.html?type=vehicle" class="btn btn-primary">Request a Vehicle</a>
@@ -199,7 +203,7 @@
           </svg>
           JETOUR INTERNATIONAL LTD.
         </div>
-        <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company.</p>
+        <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company. Two different sides of one business, held to the same standard.</p>
       </div>
       <div class="footer-col">
         <h4>Business Areas</h4>
@@ -246,6 +250,7 @@
 
 <script src="../js/config.js"></script>
 <script src="../js/navigation.js"></script>
+<script src="../js/reveal.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>

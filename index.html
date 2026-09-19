@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jetour International Ltd. | Vehicle Importation &amp; Agriculture</title>
@@ -27,7 +28,7 @@
         <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
         <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
       </svg>
-      <span class="brand-name">JETOUR INTERNATIONAL LTD.<span>Automotive &amp; Agriculture</span></span>
+      <span class="brand-name">JETOUR<span class="brand-suffix"> INTERNATIONAL LTD.</span><span class="brand-tagline">Automotive &amp; Agriculture</span></span>
     </a>
 
     <nav aria-label="Primary">
@@ -64,7 +65,7 @@
         <div class="hero-copy">
           <div class="hero-copy-inner">
             <h1>Move With Confidence.</h1>
-            <p>Jetour International Ltd. sources and imports vehicles for customers who need a dependable transportation solution, handled from enquiry through to delivery.</p>
+            <p>Jetour International Ltd. sources and imports vehicles for customers who need a dependable transportation solution, handled from enquiry through to delivery. We take the guesswork out of the process so you can focus on what the vehicle is for, not how to get it.</p>
             <div class="cta-row">
               <a href="pages/contact.html" class="btn btn-primary">Request a Vehicle</a>
               <a href="pages/automotive.html" class="btn btn-outline-light">Explore Automotive</a>
@@ -81,7 +82,7 @@
         <div class="hero-copy">
           <div class="hero-copy-inner">
             <h1>Grow With Purpose.</h1>
-            <p>Jetour International Ltd. is also involved in farming, livestock rearing, and related agricultural activities, run with the same care as our automotive work.</p>
+            <p>Jetour International Ltd. is also involved in farming, livestock rearing, and related agricultural activities, run with the same care as our automotive work. It is a slower, longer-term side of the business, and we treat it that way.</p>
             <div class="cta-row">
               <a href="pages/agriculture.html" class="btn btn-green">Explore Agriculture</a>
               <a href="pages/contact.html" class="btn btn-outline-light">Make an Enquiry</a>
@@ -107,11 +108,12 @@
   <!-- ABOUT PREVIEW -->
   <section class="section">
     <div class="container grid-2" style="align-items:center;">
-      <div>
+      <div data-reveal>
         <h2>About Jetour International Ltd.</h2>
       </div>
-      <div>
+      <div data-reveal class="reveal-delay-1">
         <p class="lede">Jetour International Ltd. operates across two areas: sourcing and importing vehicles, and running agricultural and livestock activities. Two different worlds, held together by one standard of service.</p>
+        <p style="margin-top:14px;">The automotive side exists to solve a practical problem: finding and importing the right vehicle without the customer having to manage every step themselves. The agricultural side is a separate, longer-horizon undertaking, built and grown alongside it. We do not try to make the two look identical. We just hold both to the same standard of follow-through.</p>
         <div class="section-foot">
           <a href="pages/about.html" class="btn btn-outline">Learn More About Us</a>
         </div>
@@ -122,17 +124,17 @@
   <!-- TWO BUSINESS AREAS -->
   <section class="section section--alt">
     <div class="container">
-      <div class="section-head section-head--center">
+      <div class="section-head section-head--center" data-reveal>
         <h2>Two Business Areas, One Company</h2>
       </div>
 
       <div class="split-panels">
-        <div class="split-panel split-panel--automotive">
+        <div class="split-panel split-panel--automotive" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16.5V12l1.6-4.2A2 2 0 0 1 7.5 6.5h9a2 2 0 0 1 1.9 1.3L20 12v4.5"/><path d="M4 16.5h16"/><circle cx="7.5" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/><path d="M4 12h16"/></svg>
           </div>
           <h3>Vehicle Importation</h3>
-          <p>We help customers source and import suitable vehicles, guiding the process from initial request through to arrival.</p>
+          <p>We help customers source and import suitable vehicles, guiding the process from initial request through to arrival. Whether you already know the make and model you want, or just have a general idea of what you need it for, we start from wherever you are.</p>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Vehicle sourcing</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Vehicle importation</li>
@@ -144,12 +146,12 @@
           </div>
         </div>
 
-        <div class="split-panel split-panel--agriculture">
+        <div class="split-panel split-panel--agriculture reveal-delay-1" data-reveal>
           <div class="icon-tile icon-tile--green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-9 0-16 6-16 15 9 0 15-6 15-16Z"/><path d="M5.5 18.5 15 9"/></svg>
           </div>
           <h3>Agriculture &amp; Livestock</h3>
-          <p>Our agricultural side covers farming, livestock rearing, and related activities, developed alongside our automotive business.</p>
+          <p>Our agricultural side covers farming, livestock rearing, and related activities, developed alongside our automotive business. It is managed as its own operation, with its own pace, rather than treated as an afterthought.</p>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Farming</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Livestock</li>
@@ -164,36 +166,79 @@
     </div>
   </section>
 
-  <!-- AUTOMOTIVE HIGHLIGHT -->
+  <!-- HOW IT WORKS -->
   <section class="section">
+    <div class="container grid-2">
+      <div data-reveal>
+        <h2>How It Works</h2>
+        <p style="margin-top:16px;">The process is the same whether you are reaching out about a vehicle or an agricultural enquiry. It starts with a conversation, not a form you fill in and wait on.</p>
+        <div class="section-foot">
+          <a href="pages/contact.html" class="btn btn-primary">Start a Conversation</a>
+        </div>
+      </div>
+      <div class="principles-list reveal-delay-1" data-reveal>
+        <div class="principle-row">
+          <span class="principle-index">01</span>
+          <div>
+            <h3>You Reach Out</h3>
+            <p>Send your enquiry through the contact form, WhatsApp, phone or email, whichever is easiest for you.</p>
+          </div>
+        </div>
+        <div class="principle-row">
+          <span class="principle-index">02</span>
+          <div>
+            <h3>We Review It</h3>
+            <p>Our team looks at what you have shared and follows up with questions if we need more detail.</p>
+          </div>
+        </div>
+        <div class="principle-row">
+          <span class="principle-index">03</span>
+          <div>
+            <h3>We Get to Work</h3>
+            <p>Once things are clear, we begin handling the vehicle sourcing or agricultural request on your behalf.</p>
+          </div>
+        </div>
+        <div class="principle-row">
+          <span class="principle-index">04</span>
+          <div>
+            <h3>We Keep You Updated</h3>
+            <p>You are not left guessing. We let you know where things stand as they progress.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTOMOTIVE HIGHLIGHT -->
+  <section class="section section--alt">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <h2>Vehicle Sourcing, Importation and Requests</h2>
       </div>
 
       <div class="highlight-row">
-        <div class="highlight-card">
+        <div class="highlight-card" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
           </div>
           <h3>Vehicle Sourcing</h3>
-          <p>Tell us what you are looking for and we will help identify a suitable vehicle to match your needs.</p>
+          <p>Tell us what you are looking for and we will help identify a suitable vehicle to match your needs. This includes talking through your budget, intended use and any preferences before we start looking.</p>
           <a href="pages/contact.html" class="btn btn-outline">Request a Vehicle</a>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-1" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/><path d="M3 8.5V16l9 4.5 9-4.5V8.5"/><path d="M12 13v7.5"/></svg>
           </div>
           <h3>Vehicle Importation</h3>
-          <p>We manage the importation process on your behalf, keeping you informed at every stage.</p>
+          <p>We manage the importation process on your behalf, keeping you informed at every stage. You will always know what has been done and what is coming next.</p>
           <a href="pages/automotive.html" class="btn btn-outline">Ask About Importation</a>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-2" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v4a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V3Z"/><path d="M8 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-2"/><path d="M9 13h6M9 17h6"/></svg>
           </div>
           <h3>Vehicle Requests</h3>
-          <p>Have a specific vehicle in mind? Start a request and our team will follow up directly.</p>
+          <p>Have a specific vehicle in mind? Start a request and our team will follow up directly to confirm details and next steps.</p>
           <a href="pages/contact.html" class="btn btn-outline">Start Your Vehicle Request</a>
         </div>
       </div>
@@ -201,35 +246,35 @@
   </section>
 
   <!-- AGRICULTURE HIGHLIGHT -->
-  <section class="section section--alt">
+  <section class="section">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head section-head--green" data-reveal>
         <h2>Farming, Livestock and Agricultural Activities</h2>
       </div>
 
       <div class="highlight-row">
-        <div class="highlight-card">
+        <div class="highlight-card" data-reveal>
           <div class="icon-tile icon-tile--green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-9 0-16 6-16 15 9 0 15-6 15-16Z"/><path d="M5.5 18.5 15 9"/></svg>
           </div>
           <h3>Farming</h3>
-          <p>Our farming activities are developed and managed as a core part of the Jetour agricultural operation.</p>
+          <p>Our farming activities are developed and managed as a core part of the Jetour agricultural operation, with day-to-day attention rather than occasional oversight.</p>
           <a href="pages/agriculture.html" class="btn btn-outline">Enquire About Farming</a>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-1" data-reveal>
           <div class="icon-tile icon-tile--green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 8c-1.5-1-2-3 .2-3.6C8 4 8.6 5 9 6"/><path d="M17 8c1.5-1 2-3-.2-3.6C16 4 15.4 5 15 6"/><path d="M6 10.5C6 7.5 8.7 6 12 6s6 1.5 6 4.5c0 3-1.8 6.5-6 6.5s-6-3.5-6-6.5Z"/><circle cx="9.5" cy="10.5" r=".6" fill="currentColor" stroke="none"/><circle cx="14.5" cy="10.5" r=".6" fill="currentColor" stroke="none"/><path d="M10.5 13.5c.5.5 2.5.5 3 0"/></svg>
           </div>
           <h3>Livestock</h3>
-          <p>We rear livestock as part of our agricultural operations, with attention to proper care and management.</p>
+          <p>We rear livestock as part of our agricultural operations, with attention to proper care and management as this side of the business grows.</p>
           <a href="pages/agriculture.html" class="btn btn-outline">Enquire About Livestock</a>
         </div>
-        <div class="highlight-card">
+        <div class="highlight-card reveal-delay-2" data-reveal>
           <div class="icon-tile icon-tile--green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 14c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><path d="M3 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/></svg>
           </div>
           <h3>Agricultural Activities</h3>
-          <p>Beyond farming and livestock, we take part in related agricultural work as the business grows.</p>
+          <p>Beyond farming and livestock, we take part in related agricultural work as the business grows, and we are open about the fact that this side is still developing.</p>
           <a href="pages/contact.html" class="btn btn-outline">Talk to Our Team</a>
         </div>
       </div>
@@ -237,42 +282,42 @@
   </section>
 
   <!-- WHY JETOUR -->
-  <section class="section">
+  <section class="section section--alt">
     <div class="container grid-2">
-      <div>
+      <div data-reveal>
         <h2>What Guides Our Work</h2>
-        <p class="section-foot" style="margin-top:16px;">These are the principles we hold ourselves to across both sides of the business.</p>
+        <p style="margin-top:16px;">These are not slogans we picked for a website. They are the standard we hold both sides of the business to, automotive and agriculture alike.</p>
         <div class="section-foot">
           <a href="pages/contact.html" class="btn btn-primary">Talk to Jetour</a>
         </div>
       </div>
-      <div class="principles-list">
+      <div class="principles-list reveal-delay-1" data-reveal>
         <div class="principle-row">
           <span class="principle-index">01</span>
           <div>
             <h3>Reliability</h3>
-            <p>We follow through on what we say, so customers know what to expect at every stage.</p>
+            <p>We follow through on what we say, so customers know what to expect at every stage, from the first message to the final handover.</p>
           </div>
         </div>
         <div class="principle-row">
           <span class="principle-index">02</span>
           <div>
             <h3>Quality</h3>
-            <p>From vehicle sourcing to agricultural operations, we pay attention to the details that matter.</p>
+            <p>From vehicle sourcing to agricultural operations, we pay attention to the details that matter, even the ones a customer might never see.</p>
           </div>
         </div>
         <div class="principle-row">
           <span class="principle-index">03</span>
           <div>
             <h3>Integrity</h3>
-            <p>We communicate honestly with customers, even when an answer takes a little longer to give.</p>
+            <p>We communicate honestly with customers, even when an answer takes a little longer to give or isn't the one they were hoping for.</p>
           </div>
         </div>
         <div class="principle-row">
           <span class="principle-index">04</span>
           <div>
             <h3>Commitment</h3>
-            <p>Both sides of our business are long-term commitments, not side projects.</p>
+            <p>Both sides of our business are long-term commitments, not side projects we will drop when either one gets difficult.</p>
           </div>
         </div>
       </div>
@@ -280,17 +325,18 @@
   </section>
 
   <!-- VISUAL SHOWCASE -->
-  <section class="section section--alt">
+  <section class="section">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <h2>Across Automotive and Agriculture</h2>
+        <p style="margin-top:16px;">A quick look at the two sides of what we do, side by side rather than kept separate.</p>
       </div>
       <div class="showcase-grid">
-        <img class="showcase-item showcase-item--wide showcase-item--tall" src="https://picsum.photos/seed/jetour-show-1/900/900" alt="Vehicle prepared for import at Jetour International Ltd.">
-        <img class="showcase-item" src="https://picsum.photos/seed/jetour-show-2/500/300" alt="Farmland managed by Jetour International Ltd.">
-        <img class="showcase-item" src="https://picsum.photos/seed/jetour-show-3/500/300" alt="Livestock reared by Jetour International Ltd.">
-        <img class="showcase-item showcase-item--wide" src="https://picsum.photos/seed/jetour-show-4/900/400" alt="Vehicles handled by Jetour International Ltd.">
-        <img class="showcase-item" src="https://picsum.photos/seed/jetour-show-5/500/300" alt="Agricultural activity at Jetour International Ltd.">
+        <img data-reveal class="showcase-item showcase-item--wide showcase-item--tall" src="https://picsum.photos/seed/jetour-show-1/900/900" alt="Vehicle prepared for import at Jetour International Ltd.">
+        <img data-reveal class="reveal-delay-1 showcase-item" src="https://picsum.photos/seed/jetour-show-2/500/300" alt="Farmland managed by Jetour International Ltd.">
+        <img data-reveal class="reveal-delay-2 showcase-item" src="https://picsum.photos/seed/jetour-show-3/500/300" alt="Livestock reared by Jetour International Ltd.">
+        <img data-reveal class="reveal-delay-3 showcase-item showcase-item--wide" src="https://picsum.photos/seed/jetour-show-4/900/400" alt="Vehicles handled by Jetour International Ltd.">
+        <img data-reveal class="reveal-delay-4 showcase-item" src="https://picsum.photos/seed/jetour-show-5/500/300" alt="Agricultural activity at Jetour International Ltd.">
       </div>
       <div class="section-foot">
         <a href="pages/about.html" class="btn btn-outline">Explore Our Businesses</a>
@@ -299,16 +345,17 @@
   </section>
 
   <!-- FAQ PREVIEW -->
-  <section class="section">
+  <section class="section section--alt">
     <div class="container grid-2">
-      <div>
+      <div data-reveal>
         <h2>Frequently Asked Questions</h2>
+        <p style="margin-top:16px;">A few of the questions we hear most. The full list, sorted by category, is on the FAQ page.</p>
         <div class="section-foot">
           <a href="pages/faq.html" class="btn btn-outline">View All FAQs</a>
         </div>
       </div>
       <div class="faq-list">
-        <div class="faq-item">
+        <div class="faq-item" data-reveal>
           <h3>
             <button class="faq-question" data-faq-question aria-expanded="false" aria-controls="faq-home-1" id="faq-home-q1">
               What does Jetour International Ltd. do?
@@ -319,7 +366,7 @@
             <div class="faq-answer-inner"><p>Jetour International Ltd. operates in two areas: vehicle sourcing and importation, and agriculture including farming and livestock.</p></div>
           </div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item reveal-delay-1" data-reveal>
           <h3>
             <button class="faq-question" data-faq-question aria-expanded="false" aria-controls="faq-home-2" id="faq-home-q2">
               Can I request a specific vehicle?
@@ -330,7 +377,7 @@
             <div class="faq-answer-inner"><p>Yes. Use our contact form or WhatsApp to tell us the vehicle type, make, model and any other requirements you have.</p></div>
           </div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item reveal-delay-2" data-reveal>
           <h3>
             <button class="faq-question" data-faq-question aria-expanded="false" aria-controls="faq-home-3" id="faq-home-q3">
               What types of agricultural activities does Jetour undertake?
@@ -341,7 +388,7 @@
             <div class="faq-answer-inner"><p>Our agricultural work includes farming, livestock rearing, and related activities. Get in touch for details on our current operations.</p></div>
           </div>
         </div>
-        <div class="faq-item">
+        <div class="faq-item reveal-delay-3" data-reveal>
           <h3>
             <button class="faq-question" data-faq-question aria-expanded="false" aria-controls="faq-home-4" id="faq-home-q4">
               How can I make an enquiry?
@@ -359,10 +406,10 @@
   <!-- FINAL CTA -->
   <section class="section--tight">
     <div class="container">
-      <div class="cta-band">
+      <div class="cta-band" data-reveal>
         <div>
           <h2>Ready to Get in Touch?</h2>
-          <p>Whether you are looking for a vehicle or want to learn more about our agricultural activities, we are ready to hear from you.</p>
+          <p>Whether you are looking for a vehicle or want to learn more about our agricultural activities, we are ready to hear from you. There is no wrong way to start the conversation.</p>
         </div>
         <div class="cta-row">
           <a href="pages/contact.html" class="btn btn-primary">Send an Enquiry</a>
@@ -386,7 +433,7 @@
           </svg>
           JETOUR INTERNATIONAL LTD.
         </div>
-        <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company.</p>
+        <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company. Two different sides of one business, held to the same standard.</p>
       </div>
       <div class="footer-col">
         <h4>Business Areas</h4>
@@ -435,6 +482,7 @@
 <script src="js/navigation.js"></script>
 <script src="js/hero-slider.js"></script>
 <script src="js/faq.js"></script>
+<script src="js/reveal.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

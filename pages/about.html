@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | Jetour International Ltd.</title>
@@ -27,7 +28,7 @@
         <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
         <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
       </svg>
-      <span class="brand-name">JETOUR INTERNATIONAL LTD.<span>Automotive &amp; Agriculture</span></span>
+      <span class="brand-name">JETOUR<span class="brand-suffix"> INTERNATIONAL LTD.</span><span class="brand-tagline">Automotive &amp; Agriculture</span></span>
     </a>
 
     <nav aria-label="Primary">
@@ -65,36 +66,38 @@
   </section>
 
   <section class="section">
-    <div class="container grid-2" style="align-items:center;">
-      <div>
+    <div class="container grid-2" style="align-items:flex-start;">
+      <div data-reveal>
         <h2>Who Jetour International Ltd. Is</h2>
       </div>
-      <div>
-        <p class="lede">Jetour International Ltd. is a small, focused company built around two areas of work: sourcing and importing vehicles for customers who need them, and running agricultural activities including farming and livestock. Each side of the business is managed with its own attention to detail, while sharing the same commitment to honest, dependable service.</p>
+      <div data-reveal class="reveal-delay-1">
+        <p class="lede">Jetour International Ltd. is a small, focused company built around two areas of work: sourcing and importing vehicles for customers who need them, and running agricultural activities including farming and livestock.</p>
+        <p style="margin-top:16px;">These are not two brands sharing an office. They are two working parts of the same company, run by people who understand that a vehicle enquiry and a livestock question need very different kinds of attention. What connects them is not the subject matter. It is how we handle each one: promptly, honestly, and without overpromising.</p>
+        <p style="margin-top:16px;">We are still a small company, and we are not pretending otherwise. What we can offer is direct communication and a team that actually follows up, rather than a large operation that loses track of individual requests.</p>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <div class="section-head section-head--center">
+      <div class="section-head section-head--center" data-reveal>
         <h2>Our Business Areas</h2>
       </div>
       <div class="split-panels">
-        <div class="split-panel split-panel--automotive">
+        <div class="split-panel split-panel--automotive" data-reveal>
           <div class="icon-tile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 16.5V12l1.6-4.2A2 2 0 0 1 7.5 6.5h9a2 2 0 0 1 1.9 1.3L20 12v4.5"/><path d="M4 16.5h16"/><circle cx="7.5" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/><path d="M4 12h16"/></svg>
           </div>
           <h3>Vehicle Importation</h3>
-          <p>We assist customers in sourcing and importing vehicles suited to their needs, managing the process from request to arrival.</p>
+          <p>We assist customers in sourcing and importing vehicles suited to their needs, managing the process from request to arrival. This is the more visible side of the business, and often the first way people hear about us.</p>
           <a href="automotive.html" class="btn btn-outline">Explore Automotive</a>
         </div>
-        <div class="split-panel split-panel--agriculture">
+        <div class="split-panel split-panel--agriculture reveal-delay-1" data-reveal>
           <div class="icon-tile icon-tile--green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c-9 0-16 6-16 15 9 0 15-6 15-16Z"/><path d="M5.5 18.5 15 9"/></svg>
           </div>
           <h3>Agriculture &amp; Livestock</h3>
-          <p>We carry out farming, livestock rearing, and related agricultural activities as a core part of our operations.</p>
+          <p>We carry out farming, livestock rearing, and related agricultural activities as a core part of our operations. It moves at a different pace than automotive work, and we plan for that difference rather than ignore it.</p>
           <a href="agriculture.html" class="btn btn-outline">Explore Agriculture</a>
         </div>
       </div>
@@ -103,55 +106,63 @@
 
   <section class="section">
     <div class="container grid-2">
-      <div class="highlight-card">
-        <div class="icon-tile">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
-        </div>
-        <h3>Our Mission</h3>
-        <p>To provide dependable vehicle sourcing and importation services, and to build a productive agricultural operation, both handled with honesty and care.</p>
+      <div data-reveal>
+        <h2>How We Approach Both Sides</h2>
+        <p style="margin-top:16px;">Running two different kinds of business under one name only works if neither side is treated as the "main" one. We do not let automotive enquiries wait because agriculture is busy, or the other way around. Each has its own attention, and each customer gets a direct line to the person actually handling their request rather than being passed around.</p>
+        <p style="margin-top:16px;">That also means being upfront when something is outside what we currently offer, instead of stretching the truth to close an enquiry. We would rather tell you clearly than leave you assuming.</p>
       </div>
-      <div class="highlight-card">
-        <div class="icon-tile icon-tile--green">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/></svg>
+      <div class="grid-2" style="gap:20px;">
+        <div class="highlight-card" data-reveal>
+          <div class="icon-tile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.6 7-11.5A7 7 0 0 0 5 9.5C5 14.4 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          </div>
+          <h3>Our Mission</h3>
+          <p>To provide dependable vehicle sourcing and importation services, and to build a productive agricultural operation, both handled with honesty and care.</p>
         </div>
-        <h3>Our Vision</h3>
-        <p>To grow into a trusted name in both vehicle importation and agriculture, known for reliability in each area we operate in.</p>
+        <div class="highlight-card reveal-delay-1" data-reveal>
+          <div class="icon-tile icon-tile--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/></svg>
+          </div>
+          <h3>Our Vision</h3>
+          <p>To grow into a trusted name in both vehicle importation and agriculture, known for reliability in each area we operate in, not just the one that happens to be more visible.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
-      <div class="section-head">
-        <h2>What Guides Our Work</h2>
+      <div class="section-head" data-reveal>
+        <h2>Core Values</h2>
+        <p style="margin-top:16px;">The same four principles apply whether we are answering a vehicle enquiry or managing something on the farm.</p>
       </div>
-      <div class="principles-list">
+      <div class="principles-list" data-reveal>
         <div class="principle-row">
           <span class="principle-index">01</span>
           <div>
             <h3>Reliability</h3>
-            <p>We follow through on what we say, so customers know what to expect at every stage.</p>
+            <p>If we tell a customer we will follow up by a certain point, we follow up. Small as it sounds, this is where most of the trust in this kind of work is actually built.</p>
           </div>
         </div>
         <div class="principle-row">
           <span class="principle-index">02</span>
           <div>
             <h3>Quality</h3>
-            <p>From vehicle sourcing to agricultural operations, we pay attention to the details that matter.</p>
+            <p>We would rather take a little longer on a vehicle sourcing request or a livestock decision than rush it and leave a customer with something that does not fit what they asked for.</p>
           </div>
         </div>
         <div class="principle-row">
           <span class="principle-index">03</span>
           <div>
             <h3>Integrity</h3>
-            <p>We communicate honestly with customers, even when an answer takes a little longer to give.</p>
+            <p>When timelines shift or something does not go as planned, we say so directly instead of letting a customer find out on their own.</p>
           </div>
         </div>
         <div class="principle-row">
           <span class="principle-index">04</span>
           <div>
             <h3>Commitment</h3>
-            <p>Both sides of our business are long-term commitments, not side projects.</p>
+            <p>Both sides of our business are long-term commitments. We are building them to still be here in years, not just until the next opportunity comes along.</p>
           </div>
         </div>
       </div>
@@ -160,10 +171,10 @@
 
   <section class="section--tight">
     <div class="container">
-      <div class="cta-band">
+      <div class="cta-band" data-reveal>
         <div>
           <h2>Want to Know More?</h2>
-          <p>Explore either side of our business, or reach out directly with your questions.</p>
+          <p>Explore either side of our business, or reach out directly with your questions. We would rather answer a question upfront than have you guess.</p>
         </div>
         <div class="cta-row">
           <a href="automotive.html" class="btn btn-outline-light">Explore Automotive</a>
@@ -188,7 +199,7 @@
           </svg>
           JETOUR INTERNATIONAL LTD.
         </div>
-        <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company.</p>
+        <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company. Two different sides of one business, held to the same standard.</p>
       </div>
       <div class="footer-col">
         <h4>Business Areas</h4>
@@ -236,6 +247,7 @@
 <script src="../js/config.js"></script>
 <script src="../js/navigation.js"></script>
 <script src="../js/faq.js"></script>
+<script src="../js/reveal.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>

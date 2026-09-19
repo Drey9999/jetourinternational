@@ -64,7 +64,7 @@
   .section { padding-block: 48px; }
   .section--tight { padding-block: 36px; }
 
-  .brand-name span { display: none; }
+  .brand-tagline { display: none; }
 
   .hero-slider {
     height: min(92vh, 680px);
@@ -145,5 +145,9 @@
 @media (max-width: 420px) {
   .highlight-row {
     grid-template-columns: 1fr;
+  }
+
+  .brand-suffix {
+    display: none;
   }
 }

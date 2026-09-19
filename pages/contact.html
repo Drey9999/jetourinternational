@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('js');</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Jetour International Ltd.</title>
@@ -26,7 +27,7 @@
         <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
         <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
       </svg>
-      <span class="brand-name">JETOUR INTERNATIONAL LTD.<span>Automotive &amp; Agriculture</span></span>
+      <span class="brand-name">JETOUR<span class="brand-suffix"> INTERNATIONAL LTD.</span><span class="brand-tagline">Automotive &amp; Agriculture</span></span>
     </a>
 
     <nav aria-label="Primary">
@@ -66,8 +67,9 @@
   <section class="section">
     <div class="container grid-2" style="align-items:flex-start;">
 
-      <div>
-        <h2 style="margin-bottom:24px;">Send an Enquiry</h2>
+      <div data-reveal>
+        <h2 style="margin-bottom:12px;">Send an Enquiry</h2>
+        <p style="margin-bottom:24px;">Fill in the form below with as much detail as you can. If your enquiry is about a vehicle, mention the type and budget range. If it's about agriculture, let us know what you'd like to discuss.</p>
 
         <form data-contact-form novalidate>
           <div class="form-grid">
@@ -113,8 +115,9 @@
         </form>
       </div>
 
-      <div>
-        <h2 style="margin-bottom:24px;">Contact Details</h2>
+      <div data-reveal class="reveal-delay-1">
+        <h2 style="margin-bottom:12px;">Contact Details</h2>
+        <p style="margin-bottom:24px;">Prefer to reach us directly instead of the form? Any of the options below work just as well.</p>
         <div class="contact-info-list">
           <div class="contact-info-item">
             <div class="icon-tile">
@@ -183,7 +186,7 @@
           </svg>
           JETOUR INTERNATIONAL LTD.
         </div>
-        <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company.</p>
+        <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company. Two different sides of one business, held to the same standard.</p>
       </div>
       <div class="footer-col">
         <h4>Business Areas</h4>
@@ -231,6 +234,7 @@
 <script src="../js/config.js"></script>
 <script src="../js/navigation.js"></script>
 <script src="../js/contact.js"></script>
+<script src="../js/reveal.js"></script>
 <script src="../js/main.js"></script>
 </body>
 </html>
