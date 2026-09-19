@@ -145,29 +145,6 @@ p {
   line-height: 1.7;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: var(--color-primary);
-  margin-bottom: 14px;
-}
-
-.eyebrow::before {
-  content: "";
-  width: 22px;
-  height: 2px;
-  background: currentColor;
-  display: block;
-}
-
-.eyebrow--green { color: var(--color-green); }
-.eyebrow--on-dark { color: var(--color-yellow); }
-
 /* ---- Layout ---- */
 .container {
   width: 100%;
