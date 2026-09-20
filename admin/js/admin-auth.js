@@ -19,7 +19,7 @@
   async function requireSession() {
     const { data } = await supabaseClient.auth.getSession();
     if (!data.session) {
-      window.location.href = "login.html";
+      window.location.href = "/admin/login.html";
       return;
     }
 
@@ -34,14 +34,14 @@
 
   supabaseClient.auth.onAuthStateChange((event) => {
     if (event === "SIGNED_OUT") {
-      window.location.href = "login.html";
+      window.location.href = "/admin/login.html";
     }
   });
 
   document.querySelectorAll("[data-logout-btn]").forEach((btn) => {
     btn.addEventListener("click", async () => {
       await supabaseClient.auth.signOut();
-      window.location.href = "login.html";
+      window.location.href = "/admin/login.html";
     });
   });
 })();

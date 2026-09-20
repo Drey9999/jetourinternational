@@ -69,7 +69,7 @@
           <td>${ENQUIRY_TYPE_LABELS[row.enquiry_type] || row.enquiry_type}</td>
           <td><span class="status-badge status-badge--${row.status}">${row.status}</span></td>
           <td>${formatDate(row.created_at)}</td>
-          <td><a href="enquiries.html?id=${row.id}" class="btn btn-outline btn-small">View</a></td>
+          <td><a href="/admin/enquiries.html?id=${row.id}" class="btn btn-outline btn-small">View</a></td>
         </tr>
       `
       )

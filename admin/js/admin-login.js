@@ -17,7 +17,7 @@
   }
 
   supabaseClient.auth.getSession().then(({ data }) => {
-    if (data.session) window.location.href = "index.html";
+    if (data.session) window.location.href = "/admin/index.html";
   });
 
   function setLoading(isLoading) {
@@ -48,6 +48,6 @@
       return;
     }
 
-    window.location.href = "index.html";
+    window.location.href = "/admin/index.html";
   });
 })();

@@ -42,8 +42,8 @@ const SITE_CONFIG = {
   // The public site is being reviewed with the client before the enquiry
   // backend and admin dashboard are wired up.
   supabase: {
-    url: "https://shvgmcwagdzhryjrimii.supabase.co",
-    anonKey: "sb_publishable_Y6GZ3Fdyur09G1JJgn4aXg_c3_TH6XQ"
+    url: "",
+    anonKey: ""
   }
 };
 
