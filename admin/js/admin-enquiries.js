@@ -7,7 +7,11 @@
  * WhatsApp the enquirer using their own submitted details.
  */
 (function () {
-  if (!supabaseClient) return;
+  if (!supabaseClient) {
+    const tableBody = document.querySelector("[data-enquiries-table]");
+    if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">Supabase is not configured yet.</td></tr>`;
+    return;
+  }
 
   const ENQUIRY_TYPE_LABELS = {
     vehicle: "Vehicle Importation",

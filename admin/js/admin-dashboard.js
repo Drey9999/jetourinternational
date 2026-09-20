@@ -5,7 +5,11 @@
  * admin-auth.js so it never queries before a session is confirmed.
  */
 (function () {
-  if (!supabaseClient) return;
+  if (!supabaseClient) {
+    const tableBody = document.querySelector("[data-recent-enquiries]");
+    if (tableBody) tableBody.innerHTML = `<tr><td colspan="5">Supabase is not configured yet.</td></tr>`;
+    return;
+  }
 
   const ENQUIRY_TYPE_LABELS = {
     vehicle: "Vehicle Importation",
@@ -28,17 +32,22 @@
   }
 
   async function loadCounts() {
-    const [total, fresh, vehicle, agriculture] = await Promise.all([
-      supabaseClient.from("enquiries").select("id", { count: "exact", head: true }),
-      supabaseClient.from("enquiries").select("id", { count: "exact", head: true }).eq("status", "new"),
-      supabaseClient.from("enquiries").select("id", { count: "exact", head: true }).eq("enquiry_type", "vehicle"),
-      supabaseClient.from("enquiries").select("id", { count: "exact", head: true }).in("enquiry_type", ["agriculture", "livestock"])
-    ]);
+    try {
+      const [total, fresh, vehicle, agriculture] = await Promise.all([
+        supabaseClient.from("enquiries").select("id", { count: "exact", head: true }),
+        supabaseClient.from("enquiries").select("id", { count: "exact", head: true }).eq("status", "new"),
+        supabaseClient.from("enquiries").select("id", { count: "exact", head: true }).eq("enquiry_type", "vehicle"),
+        supabaseClient.from("enquiries").select("id", { count: "exact", head: true }).in("enquiry_type", ["agriculture", "livestock"])
+      ]);
 
-    renderCount("[data-count-total]", total.count);
-    renderCount("[data-count-new]", fresh.count);
-    renderCount("[data-count-vehicle]", vehicle.count);
-    renderCount("[data-count-agriculture]", agriculture.count);
+      renderCount("[data-count-total]", total.count);
+      renderCount("[data-count-new]", fresh.count);
+      renderCount("[data-count-vehicle]", vehicle.count);
+      renderCount("[data-count-agriculture]", agriculture.count);
+    } catch (err) {
+      console.error("[admin-dashboard] could not load counts:", err);
+      ["total", "new", "vehicle", "agriculture"].forEach((key) => renderCount(`[data-count-${key}]`, "-"));
+    }
   }
 
   async function loadRecent() {
