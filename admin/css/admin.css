@@ -1,0 +1,425 @@
+/* ==========================================================================
+   admin.css -- layout and components specific to the /admin area.
+   Loaded alongside ../css/style.css for shared tokens, reset and type.
+   ========================================================================== */
+
+body {
+  background: var(--color-background);
+}
+
+/* ---- Top bar ---- */
+.admin-topbar {
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.admin-topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-block: 14px;
+  flex-wrap: wrap;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.98rem;
+}
+
+.admin-brand .brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.admin-brand span {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.7rem;
+  color: var(--color-muted);
+}
+
+.admin-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.admin-nav a {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  transition: background var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+}
+
+.admin-nav a:hover {
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.admin-nav a[aria-current="page"] {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.admin-account {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.88rem;
+  color: var(--color-muted);
+}
+
+/* ---- Page shell ---- */
+.admin-main {
+  padding-block: 32px 64px;
+}
+
+.admin-page-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+/* ---- Warning banner (Supabase not configured) ---- */
+.admin-warning {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-size: 0.92rem;
+}
+
+.admin-warning svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ---- Stat cards ---- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.stat-card strong {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* ---- Data table ---- */
+.data-table-wrap {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.92rem;
+}
+
+.data-table th {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  background: var(--color-background);
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.btn-small {
+  padding: 8px 14px;
+  font-size: 0.85rem;
+}
+
+/* ---- Status badges ---- */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.status-badge--new { background: var(--color-primary-tint); color: var(--color-primary-dark); }
+.status-badge--read { background: #F1F5F9; color: var(--color-muted); }
+.status-badge--replied { background: var(--color-green-tint); color: var(--color-green-dark); }
+.status-badge--closed { background: #F1F5F9; color: #475569; }
+
+/* ---- Filters bar ---- */
+.filters-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.filters-bar input,
+.filters-bar select {
+  padding: 11px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  background: var(--color-white);
+}
+
+.filters-bar input {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ---- Detail panel ---- */
+.detail-scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 16, 28, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-base) var(--ease-standard);
+  z-index: 90;
+}
+
+.detail-scrim[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.detail-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(92vw, 440px);
+  background: var(--color-white);
+  box-shadow: var(--shadow-raised);
+  z-index: 95;
+  padding: 28px;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform var(--duration-base) var(--ease-standard);
+}
+
+.detail-panel[data-open="true"] {
+  transform: translateX(0);
+}
+
+.detail-close {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  padding: 6px;
+  margin-bottom: 12px;
+}
+
+.detail-field {
+  margin-bottom: 18px;
+}
+
+.detail-field span {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--color-muted);
+  margin-bottom: 4px;
+}
+
+.detail-field p {
+  color: var(--color-text);
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* ---- Settings sections ---- */
+.settings-section {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.settings-section h2 {
+  margin-bottom: 18px;
+}
+
+.settings-status {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-left: 14px;
+}
+
+.image-upload-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.image-upload-row img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+}
+
+.hours-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.hours-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 10px;
+}
+
+.hours-row input {
+  padding: 11px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+}
+
+/* ---- Login page ---- */
+.login-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 36px;
+  box-shadow: var(--shadow-card);
+}
+
+.login-card .brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.login-card h1 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.login-card p {
+  margin-bottom: 24px;
+}
+
+.login-error {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: #FEF2F2;
+  color: #B91C1C;
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 0.88rem;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 860px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-nav {
+    order: 3;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hours-row {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-panel {
+    width: 100vw;
+  }
+}

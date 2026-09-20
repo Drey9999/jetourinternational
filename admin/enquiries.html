@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Enquiries | Jetour Admin</title>
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="admin-topbar">
+  <div class="container admin-topbar-inner">
+    <div class="admin-brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" role="img" aria-label="Jetour International Ltd. logo">
+        <rect width="40" height="40" fill="#155EEF"></rect>
+        <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
+        <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
+      </svg>
+      JETOUR<span>Admin</span>
+    </div>
+    <nav class="admin-nav" aria-label="Admin">
+      <a href="index.html">Dashboard</a>
+      <a href="enquiries.html" aria-current="page">Enquiries</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+    <div class="admin-account">
+      <span data-admin-email></span>
+      <button type="button" class="btn btn-outline btn-small" data-logout-btn>Logout</button>
+    </div>
+  </div>
+</header>
+
+<main class="admin-main">
+  <div class="container">
+
+    <div class="admin-warning" data-supabase-warning>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16" r=".6" fill="currentColor" stroke="none"/></svg>
+      <span>Supabase is not configured yet. Add the project URL and anon key to js/config.js.</span>
+    </div>
+
+    <div class="admin-page-head">
+      <h1>Enquiries</h1>
+    </div>
+
+    <div class="filters-bar">
+      <input type="search" placeholder="Search by name, email or phone" data-search-input>
+      <select data-filter-type>
+        <option value="all">All Types</option>
+        <option value="vehicle">Vehicle Importation</option>
+        <option value="agriculture">Agriculture</option>
+        <option value="livestock">Livestock</option>
+        <option value="general">General Enquiry</option>
+      </select>
+      <select data-filter-status>
+        <option value="all">All Statuses</option>
+        <option value="new">New</option>
+        <option value="read">Read</option>
+        <option value="replied">Replied</option>
+        <option value="closed">Closed</option>
+      </select>
+    </div>
+
+    <div class="data-table-wrap">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody data-enquiries-table>
+          <tr><td colspan="5">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</main>
+
+<div class="detail-scrim" data-detail-scrim></div>
+<aside class="detail-panel" data-detail-panel aria-label="Enquiry detail">
+  <button type="button" class="detail-close" data-detail-close aria-label="Close">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+  </button>
+
+  <div class="detail-field">
+    <span>Name</span>
+    <p data-detail-name></p>
+  </div>
+  <div class="detail-field">
+    <span>Email</span>
+    <p data-detail-email></p>
+  </div>
+  <div class="detail-field">
+    <span>Phone</span>
+    <p data-detail-phone></p>
+  </div>
+  <div class="detail-field">
+    <span>Enquiry Type</span>
+    <p data-detail-type></p>
+  </div>
+  <div class="detail-field">
+    <span>Message</span>
+    <p data-detail-message></p>
+  </div>
+  <div class="detail-field">
+    <span>Date Submitted</span>
+    <p data-detail-date></p>
+  </div>
+
+  <div class="form-field">
+    <label for="detail-status">Status</label>
+    <select id="detail-status" data-detail-status>
+      <option value="new">New</option>
+      <option value="read">Read</option>
+      <option value="replied">Replied</option>
+      <option value="closed">Closed</option>
+    </select>
+  </div>
+
+  <div class="detail-actions">
+    <a href="#" data-detail-call class="btn btn-outline btn-small">Call</a>
+    <a href="#" data-detail-email-link class="btn btn-outline btn-small">Email</a>
+    <a href="#" data-detail-whatsapp class="btn btn-whatsapp btn-small" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</aside>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="../js/config.js"></script>
+<script src="../js/supabase-client.js"></script>
+<script src="js/admin-auth.js"></script>
+<script src="js/admin-enquiries.js"></script>
+</body>
+</html>

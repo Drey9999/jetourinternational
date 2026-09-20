@@ -1,11 +1,9 @@
 /**
  * contact.js
  * Validates the enquiry form and drives its loading, success and error
- * states. The public site is being reviewed before Supabase is connected,
- * so submitEnquiry() below is a placeholder: it mimics a network call
- * so the form can be demonstrated end to end, and should be replaced
- * with a real Supabase insert into the "enquiries" table (see
- * supabase/schema.sql once the backend phase begins).
+ * states, then inserts the enquiry into Supabase (see submitEnquiry
+ * below). Falls back to a simulated success if Supabase isn't
+ * configured yet, so the form still works for a design review.
  */
 (function () {
   const form = document.querySelector("[data-contact-form]");
@@ -66,7 +64,8 @@
   function setStatus(state, message) {
     if (!statusBox) return;
     statusBox.dataset.state = state || "";
-    statusBox.textContent = message || "";
+    const textEl = statusBox.querySelector("[data-form-status-text]");
+    if (textEl) textEl.textContent = message || "";
   }
 
   function setLoading(isLoading) {
@@ -75,11 +74,26 @@
     submitBtn.textContent = isLoading ? "Sending..." : "Send Enquiry";
   }
 
-  // Placeholder network call. Replace with a real Supabase insert.
-  function submitEnquiry(payload) {
-    return new Promise((resolve) => {
-      window.setTimeout(() => resolve({ ok: true }), 900);
+  // Inserts into the "enquiries" table (see supabase/schema.sql). If
+  // js/config.js's Supabase URL/anon key are not filled in yet, this
+  // falls back to a simulated success so the form can still be
+  // demonstrated end to end.
+  async function submitEnquiry(payload) {
+    if (typeof supabaseClient === "undefined" || !supabaseClient) {
+      return new Promise((resolve) => {
+        window.setTimeout(() => resolve({ ok: true }), 900);
+      });
+    }
+
+    const { error } = await supabaseClient.from("enquiries").insert({
+      name: payload.name,
+      email: payload.email,
+      phone: payload.phone,
+      enquiry_type: payload.enquiryType,
+      message: payload.message
     });
+
+    return { ok: !error };
   }
 
   form.addEventListener("submit", async (event) => {

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Settings | Jetour Admin</title>
+<link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="admin-topbar">
+  <div class="container admin-topbar-inner">
+    <div class="admin-brand">
+      <svg class="brand-mark" viewBox="0 0 40 40" role="img" aria-label="Jetour International Ltd. logo">
+        <rect width="40" height="40" fill="#155EEF"></rect>
+        <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
+        <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
+      </svg>
+      JETOUR<span>Admin</span>
+    </div>
+    <nav class="admin-nav" aria-label="Admin">
+      <a href="index.html">Dashboard</a>
+      <a href="enquiries.html">Enquiries</a>
+      <a href="settings.html" aria-current="page">Settings</a>
+    </nav>
+    <div class="admin-account">
+      <span data-admin-email></span>
+      <button type="button" class="btn btn-outline btn-small" data-logout-btn>Logout</button>
+    </div>
+  </div>
+</header>
+
+<main class="admin-main">
+  <div class="container" style="max-width:760px;">
+
+    <div class="admin-warning" data-supabase-warning>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5"/><circle cx="12" cy="16" r=".6" fill="currentColor" stroke="none"/></svg>
+      <span>Supabase is not configured yet. Add the project URL and anon key to js/config.js.</span>
+    </div>
+
+    <div class="admin-page-head">
+      <h1>Site Settings</h1>
+    </div>
+
+    <!-- BRANDING -->
+    <section class="settings-section">
+      <h2>Branding</h2>
+      <form data-settings-form="branding">
+        <div class="image-upload-row">
+          <img src="" alt="" data-image-preview="branding">
+          <div>
+            <label class="btn btn-outline btn-small" style="cursor:pointer;">
+              Change Logo
+              <input type="file" accept="image/*" data-image-input="branding" style="display:none;">
+            </label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="branding_company_name">Company Name</label>
+          <input type="text" id="branding_company_name" name="branding_company_name">
+        </div>
+        <div class="form-field">
+          <label for="branding_company_short">Short Name</label>
+          <input type="text" id="branding_company_short" name="branding_company_short">
+        </div>
+        <button type="submit" class="btn btn-primary">Save Branding</button>
+        <span class="settings-status" data-settings-status="branding"></span>
+      </form>
+    </section>
+
+    <!-- HERO: AUTOMOTIVE -->
+    <section class="settings-section">
+      <h2>Hero: Automotive Slide</h2>
+      <form data-settings-form="hero_automotive">
+        <div class="image-upload-row">
+          <img src="" alt="" data-image-preview="hero_automotive">
+          <div>
+            <label class="btn btn-outline btn-small" style="cursor:pointer;">
+              Change Image
+              <input type="file" accept="image/*" data-image-input="hero_automotive" style="display:none;">
+            </label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="hero_automotive_headline">Headline</label>
+          <input type="text" id="hero_automotive_headline" name="hero_automotive_headline">
+        </div>
+        <div class="form-field">
+          <label for="hero_automotive_subtext">Subtext</label>
+          <textarea id="hero_automotive_subtext" name="hero_automotive_subtext"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Automotive Hero</button>
+        <span class="settings-status" data-settings-status="hero_automotive"></span>
+      </form>
+    </section>
+
+    <!-- HERO: AGRICULTURE -->
+    <section class="settings-section">
+      <h2>Hero: Agriculture Slide</h2>
+      <form data-settings-form="hero_agriculture">
+        <div class="image-upload-row">
+          <img src="" alt="" data-image-preview="hero_agriculture">
+          <div>
+            <label class="btn btn-outline btn-small" style="cursor:pointer;">
+              Change Image
+              <input type="file" accept="image/*" data-image-input="hero_agriculture" style="display:none;">
+            </label>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="hero_agriculture_headline">Headline</label>
+          <input type="text" id="hero_agriculture_headline" name="hero_agriculture_headline">
+        </div>
+        <div class="form-field">
+          <label for="hero_agriculture_subtext">Subtext</label>
+          <textarea id="hero_agriculture_subtext" name="hero_agriculture_subtext"></textarea>
+        </div>
+        <button type="submit" class="btn btn-green">Save Agriculture Hero</button>
+        <span class="settings-status" data-settings-status="hero_agriculture"></span>
+      </form>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="settings-section">
+      <h2>Contact Information</h2>
+      <form data-settings-form="contact">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="contact_phone_display">Phone (display)</label>
+            <input type="text" id="contact_phone_display" name="contact_phone_display" placeholder="+234 800 000 0000">
+          </div>
+          <div class="form-field">
+            <label for="contact_phone_href">Phone (dial format)</label>
+            <input type="text" id="contact_phone_href" name="contact_phone_href" placeholder="+2348000000000">
+          </div>
+          <div class="form-field">
+            <label for="contact_whatsapp_number">WhatsApp Number</label>
+            <input type="text" id="contact_whatsapp_number" name="contact_whatsapp_number" placeholder="2348000000000">
+          </div>
+          <div class="form-field">
+            <label for="contact_email">Email</label>
+            <input type="email" id="contact_email" name="contact_email">
+          </div>
+          <div class="form-field form-field--full">
+            <label for="contact_whatsapp_message">Default WhatsApp Message</label>
+            <input type="text" id="contact_whatsapp_message" name="contact_whatsapp_message">
+          </div>
+          <div class="form-field form-field--full">
+            <label for="contact_address">Address</label>
+            <input type="text" id="contact_address" name="contact_address">
+          </div>
+        </div>
+
+        <label style="display:block; font-weight:600; font-size:0.9rem; margin-bottom:8px;">Business Hours</label>
+        <div class="hours-editor" data-hours-editor></div>
+        <button type="button" class="btn btn-outline btn-small" data-add-hour style="margin-bottom:20px;">Add Row</button>
+
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="contact_instagram">Instagram URL</label>
+            <input type="url" id="contact_instagram" name="contact_instagram">
+          </div>
+          <div class="form-field">
+            <label for="contact_facebook">Facebook URL</label>
+            <input type="url" id="contact_facebook" name="contact_facebook">
+          </div>
+          <div class="form-field">
+            <label for="contact_x">X (Twitter) URL</label>
+            <input type="url" id="contact_x" name="contact_x">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Contact Information</button>
+        <span class="settings-status" data-settings-status="contact"></span>
+      </form>
+    </section>
+
+  </div>
+</main>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="../js/config.js"></script>
+<script src="../js/supabase-client.js"></script>
+<script src="js/admin-auth.js"></script>
+<script src="js/admin-settings.js"></script>
+</body>
+</html>
