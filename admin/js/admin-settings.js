@@ -166,5 +166,5 @@
     });
   }
 
-  document.addEventListener("admin-ready", loadSettings);
+  window.adminReady.then(loadSettings);
 })();

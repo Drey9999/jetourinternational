@@ -1,8 +1,8 @@
 /**
  * admin-dashboard.js
  * Populates the summary cards and the recent enquiries table on
- * admin/index.html. Waits for the "admin-ready" event from
- * admin-auth.js so it never queries before a session is confirmed.
+ * admin/index.html. Waits on window.adminReady (set by admin-auth.js)
+ * so it never queries before a session is confirmed.
  */
 (function () {
   if (!supabaseClient) {
@@ -85,7 +85,7 @@
       .join("");
   }
 
-  document.addEventListener("admin-ready", () => {
+  window.adminReady.then(() => {
     loadCounts();
     loadRecent();
   });

@@ -166,5 +166,5 @@
     });
   }
 
-  document.addEventListener("admin-ready", loadEnquiries);
+  window.adminReady.then(loadEnquiries);
 })();

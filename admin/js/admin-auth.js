@@ -3,14 +3,26 @@
  * Include on every admin page EXCEPT login.html. Redirects to
  * login.html if there is no active Supabase session, wires up any
  * [data-logout-btn], and fills in [data-admin-email] once the
- * session is confirmed. Dispatches an "admin-ready" event on
- * document once a session is confirmed, so page-specific scripts
- * (dashboard, enquiries, settings) know it is safe to start
- * fetching data.
+ * session is confirmed.
+ *
+ * Exposes window.adminReady, a Promise that resolves with the
+ * session once confirmed. Page-specific scripts (dashboard,
+ * enquiries, settings) call window.adminReady.then(...) instead of
+ * listening for an event, because a Promise still fires its
+ * .then() callback even if it was attached after the Promise had
+ * already resolved. An event fired from an async callback in one
+ * script does not have that guarantee: if it fires before the next
+ * script tag has finished loading and attached its listener, that
+ * script misses it silently, forever.
  */
 (function () {
   const notConfiguredBanner = document.querySelector("[data-supabase-warning]");
   const errorBanner = document.querySelector("[data-admin-error]");
+  let resolveAdminReady;
+
+  window.adminReady = new Promise((resolve) => {
+    resolveAdminReady = resolve;
+  });
 
   function showError(message) {
     console.error("[admin-auth]", message);
@@ -24,6 +36,8 @@
     if (notConfiguredBanner) notConfiguredBanner.style.display = "flex";
     return;
   }
+
+  let sessionConfirmed = false;
 
   async function requireSession() {
     try {
@@ -43,7 +57,8 @@
         el.textContent = data.session.user.email;
       });
 
-      document.dispatchEvent(new CustomEvent("admin-ready", { detail: { session: data.session } }));
+      sessionConfirmed = true;
+      resolveAdminReady(data.session);
     } catch (err) {
       showError("Something went wrong while checking your session. Open the browser console for details.");
     }
@@ -55,15 +70,10 @@
   // a few seconds, something silently failed. Say so instead of leaving
   // the page stuck on its "Loading..." placeholders forever.
   window.setTimeout(() => {
-    const stillOnLoginCheck = !document.body.dataset.adminReadyFired;
-    if (stillOnLoginCheck && errorBanner && errorBanner.style.display !== "flex") {
+    if (!sessionConfirmed && errorBanner && errorBanner.style.display !== "flex") {
       showError("This is taking longer than expected. Check the browser console for errors, and confirm your account has been added to the admins table in Supabase.");
     }
   }, 6000);
-
-  document.addEventListener("admin-ready", () => {
-    document.body.dataset.adminReadyFired = "true";
-  });
 
   supabaseClient.auth.onAuthStateChange((event) => {
     if (event === "SIGNED_OUT") {
