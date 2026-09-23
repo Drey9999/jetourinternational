@@ -57,7 +57,7 @@
 <main id="main-content">
 
   <section class="page-hero page-hero--green">
-    <div class="page-hero-media" style="background-image:url('https://picsum.photos/seed/jetour-agri-hero/1800/900');"></div>
+    <div class="page-hero-media" data-bg-img="agriculture-hero" style="background-image:url('https://picsum.photos/seed/jetour-agri-hero/1800/900');"></div>
     <div class="page-hero-scrim"></div>
     <div class="container page-hero-content">
       <h1>Farming, Livestock and Agricultural Activities</h1>
@@ -89,7 +89,7 @@
           </div>
           <h3>Farming</h3>
           <p>Our farming activities are developed and managed as a core part of the Jetour agricultural operation. Reach out if you would like more detail on what is currently underway.</p>
-          <a href="contact.html?type=agriculture" class="btn btn-outline">Enquire About Farming</a>
+          <a href="#" data-config-href="whatsapp" data-whatsapp-message="Hello, I would like to enquire about your farming operations." class="btn btn-outline">Enquire About Farming</a>
         </div>
         <div class="highlight-card reveal-delay-1" data-reveal>
           <div class="icon-tile icon-tile--green">
@@ -97,7 +97,7 @@
           </div>
           <h3>Livestock</h3>
           <p>We rear livestock as part of our agricultural operations, with attention to proper care and management rather than treating it as a side detail.</p>
-          <a href="contact.html?type=livestock" class="btn btn-outline">Enquire About Livestock</a>
+          <a href="#" data-config-href="whatsapp" data-whatsapp-message="Hello, I would like to enquire about your livestock." class="btn btn-outline">Enquire About Livestock</a>
         </div>
         <div class="highlight-card reveal-delay-2" data-reveal>
           <div class="icon-tile icon-tile--green">
@@ -105,7 +105,7 @@
           </div>
           <h3>Agricultural Activities</h3>
           <p>Beyond farming and livestock, we take part in related agricultural work as the business grows, and we are upfront that this is still a developing part of what we do.</p>
-          <a href="contact.html?type=agriculture" class="btn btn-outline">Talk to Our Team</a>
+          <a href="#" data-config-href="phone" class="btn btn-outline">Talk to Our Team</a>
         </div>
       </div>
     </div>
@@ -124,7 +124,7 @@
         </div>
         <h3>Reach Out With Questions</h3>
         <p>If you have a specific question about our farming or livestock work that isn't covered here, the fastest way to get an answer is to ask directly rather than guess from the website alone.</p>
-        <a href="contact.html?type=agriculture" class="btn btn-outline">Ask a Question</a>
+        <a href="#" data-config-href="whatsapp" class="btn btn-outline">Ask a Question</a>
       </div>
     </div>
   </section>
@@ -135,11 +135,11 @@
         <h2>A Look At Our Work</h2>
       </div>
       <div class="showcase-grid">
-        <img data-reveal class="showcase-item showcase-item--wide showcase-item--tall" src="https://picsum.photos/seed/jetour-agri-show-1/900/900" alt="Farmland managed by Jetour International Ltd.">
-        <img data-reveal class="reveal-delay-1 showcase-item" src="https://picsum.photos/seed/jetour-agri-show-2/500/300" alt="Livestock reared by Jetour International Ltd.">
-        <img data-reveal class="reveal-delay-2 showcase-item" src="https://picsum.photos/seed/jetour-agri-show-3/500/300" alt="Crops grown as part of Jetour agricultural operations.">
-        <img data-reveal class="reveal-delay-3 showcase-item showcase-item--wide" src="https://picsum.photos/seed/jetour-agri-show-4/900/400" alt="Agricultural activity at Jetour International Ltd.">
-        <img data-reveal class="reveal-delay-4 showcase-item" src="https://picsum.photos/seed/jetour-agri-show-5/500/300" alt="Farm operations managed by Jetour International Ltd.">
+        <img data-reveal class="showcase-item showcase-item--wide showcase-item--tall" data-img="agri-showcase-1" src="https://picsum.photos/seed/jetour-agri-show-1/900/900" alt="Farmland managed by Jetour International Ltd.">
+        <img data-reveal class="reveal-delay-1 showcase-item" data-img="agri-showcase-2" src="https://picsum.photos/seed/jetour-agri-show-2/500/300" alt="Livestock reared by Jetour International Ltd.">
+        <img data-reveal class="reveal-delay-2 showcase-item" data-img="agri-showcase-3" src="https://picsum.photos/seed/jetour-agri-show-3/500/300" alt="Crops grown as part of Jetour agricultural operations.">
+        <img data-reveal class="reveal-delay-3 showcase-item showcase-item--wide" data-img="agri-showcase-4" src="https://picsum.photos/seed/jetour-agri-show-4/900/400" alt="Agricultural activity at Jetour International Ltd.">
+        <img data-reveal class="reveal-delay-4 showcase-item" data-img="agri-showcase-5" src="https://picsum.photos/seed/jetour-agri-show-5/500/300" alt="Farm operations managed by Jetour International Ltd.">
       </div>
     </div>
   </section>
@@ -152,7 +152,7 @@
           <p>Reach out to learn more or discuss a specific enquiry. We would rather answer directly than have you assume.</p>
         </div>
         <div class="cta-row">
-          <a href="contact.html?type=agriculture" class="btn btn-primary" style="background:var(--color-white);color:var(--color-green-dark);border-color:var(--color-white);">Make an Enquiry</a>
+          <a href="#" data-config-href="phone" class="btn btn-primary" style="background:var(--color-white);color:var(--color-green-dark);border-color:var(--color-white);">Talk to Us</a>
           <a href="#" data-config-href="whatsapp" class="btn btn-whatsapp">Chat on WhatsApp</a>
         </div>
       </div>
@@ -171,7 +171,7 @@
             <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
             <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
           </svg>
-          JETOUR INTERNATIONAL LTD.
+          <span data-config-text="companyName">JETOUR INTERNATIONAL LTD.</span>
         </div>
         <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company. Two different sides of one business, held to the same standard.</p>
       </div>
@@ -219,6 +219,7 @@
 </a>
 
 <script src="../js/config.js"></script>
+<script src="../js/images.js"></script>
 <script src="../js/navigation.js"></script>
 <script src="../js/reveal.js"></script>
 <script src="../js/main.js"></script>

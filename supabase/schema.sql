@@ -90,9 +90,14 @@ create policy "Admins can update enquiries"
   using (public.is_admin())
   with check (public.is_admin());
 
--- No delete policy on purpose: nobody can delete an enquiry through
--- the API, including admins. Add one deliberately later if that
--- turns out to be needed.
+drop policy if exists "Admins can delete enquiries" on public.enquiries;
+create policy "Admins can delete enquiries"
+  on public.enquiries for delete
+  to authenticated
+  using (public.is_admin());
+
+-- Deleting an enquiry is permanent. The admin UI asks for confirmation
+-- before calling this.
 
 
 -- ------------------------------------------------------------

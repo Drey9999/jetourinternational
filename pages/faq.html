@@ -56,7 +56,7 @@
 <main id="main-content">
 
   <section class="page-hero" style="padding-block:64px 44px;">
-    <div class="page-hero-media" style="background-image:url('https://picsum.photos/seed/jetour-faq-hero/1800/700');"></div>
+    <div class="page-hero-media" data-bg-img="faq-hero" style="background-image:url('https://picsum.photos/seed/jetour-faq-hero/1800/700');"></div>
     <div class="page-hero-scrim"></div>
     <div class="container page-hero-content">
       <h1>Frequently Asked Questions</h1>
@@ -113,7 +113,7 @@
             <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
           </button></h3>
           <div class="faq-answer" data-faq-answer id="faq-3" role="region" aria-labelledby="faq-q3">
-            <div class="faq-answer-inner"><p>Yes. Share the vehicle type, make, model and any other preferences through our contact form or WhatsApp, and our team will follow up.</p></div>
+            <div class="faq-answer-inner"><p>Yes. Share the vehicle type, make, model and any other preferences by phone or WhatsApp, and our team will follow up.</p></div>
           </div>
         </div>
 
@@ -163,7 +163,7 @@
             <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
           </button></h3>
           <div class="faq-answer" data-faq-answer id="faq-7" role="region" aria-labelledby="faq-q7">
-            <div class="faq-answer-inner"><p>Yes. Select Livestock as your enquiry type on the contact form, or message us directly on WhatsApp.</p></div>
+            <div class="faq-answer-inner"><p>Yes. Message us directly on WhatsApp or give us a call and mention livestock.</p></div>
           </div>
         </div>
 
@@ -183,7 +183,7 @@
             <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
           </button></h3>
           <div class="faq-answer" data-faq-answer id="faq-8" role="region" aria-labelledby="faq-q8">
-            <div class="faq-answer-inner"><p>You can reach us through the contact form, WhatsApp, phone or email. All details are on our Contact page.</p></div>
+            <div class="faq-answer-inner"><p>You can reach us by phone, WhatsApp or email. All details are on our Contact page.</p></div>
           </div>
         </div>
 
@@ -221,8 +221,9 @@
 
       <div class="section-foot" style="text-align:center;" data-reveal>
         <p class="lede" style="margin-inline:auto 0;display:inline;">Still Have Questions?</p>
-        <div style="margin-top:18px;">
-          <a href="contact.html" class="btn btn-primary">Contact Jetour</a>
+        <div class="cta-row" style="margin-top:18px; justify-content:center;">
+          <a href="#" data-config-href="phone" class="btn btn-primary">Talk to Us</a>
+          <a href="#" data-config-href="whatsapp" class="btn btn-whatsapp">Chat on WhatsApp</a>
         </div>
       </div>
 
@@ -241,7 +242,7 @@
             <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
             <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
           </svg>
-          JETOUR INTERNATIONAL LTD.
+          <span data-config-text="companyName">JETOUR INTERNATIONAL LTD.</span>
         </div>
         <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company. Two different sides of one business, held to the same standard.</p>
       </div>
@@ -289,6 +290,7 @@
 </a>
 
 <script src="../js/config.js"></script>
+<script src="../js/images.js"></script>
 <script src="../js/navigation.js"></script>
 <script src="../js/faq.js"></script>
 <script src="../js/reveal.js"></script>

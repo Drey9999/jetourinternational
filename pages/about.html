@@ -57,7 +57,7 @@
 <main id="main-content">
 
   <section class="page-hero">
-    <div class="page-hero-media" style="background-image:url('https://picsum.photos/seed/jetour-about-hero/1800/900');"></div>
+    <div class="page-hero-media" data-bg-img="about-hero" style="background-image:url('https://picsum.photos/seed/jetour-about-hero/1800/900');"></div>
     <div class="page-hero-scrim"></div>
     <div class="container page-hero-content">
       <h1>Two Businesses, One Standard of Service</h1>
@@ -179,7 +179,7 @@
         <div class="cta-row">
           <a href="automotive.html" class="btn btn-outline-light">Explore Automotive</a>
           <a href="agriculture.html" class="btn btn-outline-light">Explore Agriculture</a>
-          <a href="contact.html" class="btn btn-primary">Contact Jetour</a>
+          <a href="#" data-config-href="phone" class="btn btn-primary">Talk to Us</a>
         </div>
       </div>
     </div>
@@ -197,7 +197,7 @@
             <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
             <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
           </svg>
-          JETOUR INTERNATIONAL LTD.
+          <span data-config-text="companyName">JETOUR INTERNATIONAL LTD.</span>
         </div>
         <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company. Two different sides of one business, held to the same standard.</p>
       </div>
@@ -245,6 +245,7 @@
 </a>
 
 <script src="../js/config.js"></script>
+<script src="../js/images.js"></script>
 <script src="../js/navigation.js"></script>
 <script src="../js/faq.js"></script>
 <script src="../js/reveal.js"></script>

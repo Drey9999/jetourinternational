@@ -98,33 +98,43 @@
     <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
   </button>
 
-  <div class="detail-field">
-    <span>Name</span>
-    <p data-detail-name></p>
+  <div class="detail-header">
+    <span class="type-badge" data-detail-type-badge></span>
+    <h2 data-detail-name></h2>
+    <p class="detail-meta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+      <span data-detail-date></span>
+    </p>
   </div>
-  <div class="detail-field">
-    <span>Email</span>
-    <p data-detail-email></p>
+
+  <div class="detail-contact-list">
+    <div class="detail-contact-item">
+      <div class="icon-tile icon-tile--sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg>
+      </div>
+      <div>
+        <span>Email</span>
+        <p data-detail-email></p>
+      </div>
+    </div>
+    <div class="detail-contact-item">
+      <div class="icon-tile icon-tile--sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1L6.6 10.8Z"/></svg>
+      </div>
+      <div>
+        <span>Phone</span>
+        <p data-detail-phone></p>
+      </div>
+    </div>
   </div>
-  <div class="detail-field">
-    <span>Phone</span>
-    <p data-detail-phone></p>
-  </div>
-  <div class="detail-field">
-    <span>Enquiry Type</span>
-    <p data-detail-type></p>
-  </div>
-  <div class="detail-field">
+
+  <div class="detail-message-block">
     <span>Message</span>
     <p data-detail-message></p>
   </div>
-  <div class="detail-field">
-    <span>Date Submitted</span>
-    <p data-detail-date></p>
-  </div>
 
   <div class="form-field">
-    <label for="detail-status">Status</label>
+    <label for="detail-status">Update Status</label>
     <select id="detail-status" data-detail-status>
       <option value="new">New</option>
       <option value="read">Read</option>
@@ -137,6 +147,10 @@
     <a href="#" data-detail-call class="btn btn-outline btn-small">Call</a>
     <a href="#" data-detail-email-link class="btn btn-outline btn-small">Email</a>
     <a href="#" data-detail-whatsapp class="btn btn-whatsapp btn-small" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
+  <div class="detail-danger-zone">
+    <button type="button" class="btn btn-danger btn-small" data-detail-delete>Delete Enquiry</button>
   </div>
 </aside>
 

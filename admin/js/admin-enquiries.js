@@ -3,7 +3,8 @@
  * Loads every enquiry once, then filters/searches client-side since
  * the volume for a small business site will be small. Clicking a
  * row opens a detail panel where the status can be changed (saved
- * immediately to Supabase) and the admin can call, email or
+ * immediately to Supabase), the enquiry can be permanently deleted
+ * after a confirmation prompt, and the admin can call, email or
  * WhatsApp the enquirer using their own submitted details.
  */
 (function () {
@@ -84,13 +85,19 @@
     panel.querySelector("[data-detail-name]").textContent = row.name;
     panel.querySelector("[data-detail-email]").textContent = row.email;
     panel.querySelector("[data-detail-phone]").textContent = row.phone;
-    panel.querySelector("[data-detail-type]").textContent = ENQUIRY_TYPE_LABELS[row.enquiry_type] || row.enquiry_type;
     panel.querySelector("[data-detail-message]").textContent = row.message;
     panel.querySelector("[data-detail-date]").textContent = formatDate(row.created_at);
+
+    const typeBadge = panel.querySelector("[data-detail-type-badge]");
+    typeBadge.textContent = ENQUIRY_TYPE_LABELS[row.enquiry_type] || row.enquiry_type;
+    typeBadge.className = `type-badge type-badge--${row.enquiry_type}`;
 
     const statusSelect = panel.querySelector("[data-detail-status]");
     statusSelect.value = row.status;
     statusSelect.dataset.currentId = row.id;
+
+    const deleteBtn = panel.querySelector("[data-detail-delete]");
+    if (deleteBtn) deleteBtn.dataset.currentId = row.id;
 
     panel.querySelector("[data-detail-call]").setAttribute("href", `tel:${row.phone}`);
     panel.querySelector("[data-detail-email-link]").setAttribute("href", `mailto:${row.email}`);
@@ -124,6 +131,21 @@
     }
     const row = allEnquiries.find((item) => item.id === id);
     if (row) row.status = newStatus;
+    renderTable();
+  }
+
+  async function deleteEnquiry(id) {
+    const confirmed = window.confirm("Delete this enquiry permanently? This cannot be undone.");
+    if (!confirmed) return;
+
+    const { error } = await supabaseClient.from("enquiries").delete().eq("id", id);
+    if (error) {
+      alert("Could not delete the enquiry. Please try again.");
+      return;
+    }
+
+    allEnquiries = allEnquiries.filter((item) => item.id !== id);
+    closeDetail();
     renderTable();
   }
 
@@ -163,6 +185,13 @@
   if (statusSelect) {
     statusSelect.addEventListener("change", () => {
       updateStatus(statusSelect.dataset.currentId, statusSelect.value);
+    });
+  }
+
+  const deleteBtn = panel ? panel.querySelector("[data-detail-delete]") : null;
+  if (deleteBtn) {
+    deleteBtn.addEventListener("click", () => {
+      deleteEnquiry(deleteBtn.dataset.currentId);
     });
   }
 

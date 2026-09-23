@@ -38,12 +38,12 @@ const SITE_CONFIG = {
     x: ""
   },
 
-  // Supabase project values are intentionally left blank in this build.
-  // The public site is being reviewed with the client before the enquiry
-  // backend and admin dashboard are wired up.
+  // Paused for now (see README): the admin panel and Supabase backend are
+  // not linked from the live site, but the files are kept in admin/ and
+  // supabase/ for later. Fill these in only when that phase is reactivated.
   supabase: {
-    url: "https://shvgmcwagdzhryjrimii.supabase.co",
-    anonKey: "sb_publishable_Y6GZ3Fdyur09G1JJgn4aXg_c3_TH6XQ"
+    url: "",
+    anonKey: ""
   }
 };
 

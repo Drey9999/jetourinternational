@@ -57,7 +57,7 @@
 <main id="main-content">
 
   <section class="page-hero">
-    <div class="page-hero-media" style="background-image:url('https://picsum.photos/seed/jetour-auto-hero/1800/900');"></div>
+    <div class="page-hero-media" data-bg-img="automotive-hero" style="background-image:url('https://picsum.photos/seed/jetour-auto-hero/1800/900');"></div>
     <div class="page-hero-scrim"></div>
     <div class="container page-hero-content">
       <h1>Vehicle Sourcing and Importation</h1>
@@ -89,7 +89,7 @@
           </div>
           <h3>Vehicle Sourcing</h3>
           <p>We help you identify a suitable vehicle based on your requirements, budget and preferences. This means asking questions upfront rather than guessing at what you want, and narrowing options down to a shortlist worth your time.</p>
-          <a href="contact.html?type=vehicle" class="btn btn-outline">Request a Vehicle</a>
+          <a href="#" data-config-href="whatsapp" data-whatsapp-message="Hello, I would like to request a vehicle. Here are my requirements:" class="btn btn-outline">Request a Vehicle</a>
         </div>
         <div class="highlight-card reveal-delay-1" data-reveal>
           <div class="icon-tile">
@@ -97,7 +97,7 @@
           </div>
           <h3>Vehicle Importation</h3>
           <p>Once a vehicle is identified, we manage the importation process and keep you updated along the way. You should never have to chase us for a status update. If something changes, we tell you before you have to ask.</p>
-          <a href="contact.html?type=vehicle" class="btn btn-outline">Ask About Importation</a>
+          <a href="#" data-config-href="whatsapp" data-whatsapp-message="Hello, I have a question about vehicle importation." class="btn btn-outline">Ask About Importation</a>
         </div>
         <div class="highlight-card reveal-delay-2" data-reveal>
           <div class="icon-tile">
@@ -105,7 +105,7 @@
           </div>
           <h3>Vehicle Requests</h3>
           <p>Have a specific vehicle in mind? Submit a request with your preferred details and we will follow up to confirm whether it is something we can realistically source.</p>
-          <a href="contact.html?type=vehicle" class="btn btn-outline">Start Your Vehicle Request</a>
+          <a href="#" data-config-href="whatsapp" data-whatsapp-message="Hello, I would like to submit a vehicle request." class="btn btn-outline">Start Your Vehicle Request</a>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@
     <div class="container grid-2" style="align-items:flex-start;">
       <div data-reveal>
         <h2>How to Enquire</h2>
-        <p style="margin-top:14px;">Send us your requirements through the contact form or WhatsApp, and our team will follow up to discuss suitable options and next steps.</p>
+        <p style="margin-top:14px;">Send us your requirements by phone or WhatsApp, and our team will follow up to discuss suitable options and next steps.</p>
         <p style="margin-top:14px;">A quick note on what helps: the more specific you can be up front about vehicle type, budget range and timeline, the faster we can give you a useful answer instead of a round of clarifying questions.</p>
       </div>
       <div class="principles-list reveal-delay-1" data-reveal style="border-top:none;">
@@ -182,7 +182,7 @@
           <p>Send us your requirements and our team will get back to you. No pressure, no obligation, just a straight answer.</p>
         </div>
         <div class="cta-row">
-          <a href="contact.html?type=vehicle" class="btn btn-primary">Request a Vehicle</a>
+          <a href="#" data-config-href="phone" class="btn btn-primary">Talk to Us</a>
           <a href="#" data-config-href="whatsapp" class="btn btn-whatsapp">Chat on WhatsApp</a>
         </div>
       </div>
@@ -201,7 +201,7 @@
             <path d="M0 40 L40 40 L0 0 Z" fill="#16A34A"></path>
             <path d="M0 0 L40 40" stroke="#F8FAFC" stroke-width="2"></path>
           </svg>
-          JETOUR INTERNATIONAL LTD.
+          <span data-config-text="companyName">JETOUR INTERNATIONAL LTD.</span>
         </div>
         <p>Vehicle sourcing and importation, alongside agriculture and livestock operations, under one company. Two different sides of one business, held to the same standard.</p>
       </div>
@@ -249,6 +249,7 @@
 </a>
 
 <script src="../js/config.js"></script>
+<script src="../js/images.js"></script>
 <script src="../js/navigation.js"></script>
 <script src="../js/reveal.js"></script>
 <script src="../js/main.js"></script>
