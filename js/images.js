@@ -18,8 +18,8 @@
  */
 const SITE_IMAGES = {
   // Homepage hero slider - wide, landscape, roughly 1800x1200
-  "hero-automotive": "https://picsum.photos/seed/jetour-hero-auto/1800/1200",
-  "hero-agriculture": "https://picsum.photos/seed/jetour-hero-agri/1800/1200",
+  "hero-automotive": "assets/images/Mercedes-Benz GLE Coupé_ Luxo, Desempenho e Tecnologia em um SUV Premium.jfif",
+  "hero-agriculture": "assets/images/livestock.png",
 
   // Page banners - wide, roughly 1800x900 (Contact and FAQ are shorter, 1800x700)
   "about-hero": "https://picsum.photos/seed/jetour-about-hero/1800/900",
